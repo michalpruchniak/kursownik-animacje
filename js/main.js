@@ -11,8 +11,11 @@ var fps = 60;
 
 setInterval(animationLoop, 1000/fps);
 function animationLoop(){
-  ctx.clearRect(0,0,my_canvas.width,my_canvas.height);
-    x += 1;
-    y += 1;
-    ctx.fillRect(x-h/2, y-h/2, h, h);
+  if(x<my_canvas.width-h/2){
+    ctx.clearRect(0,0,my_canvas.width,my_canvas.height);
+      x += 1;
+      y += 1;
+      ctx.fillRect(x-h/2, y-h/2, h, h);
+      console.log(x);
+  }
 }
